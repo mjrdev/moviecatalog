@@ -1,0 +1,20 @@
+{
+    "name": "jr/mc",
+    "description": "sistema de catalogos de filmes",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MovieCatalog": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mjrdev",
+            "email": "jrgomesdev@gmail.com"
+        }
+    ],
+    "require": {
+        "nikic/fast-route": "^1.3"
+    }
+}
