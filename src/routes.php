@@ -1,11 +1,10 @@
 <?php 
 
-require 'router/router.php';
-use movieCatalog\Controllers\MovieController;
-
-$m = new MovieController();
+use MovieCatalog\Router\Router;
+use MovieCatalog\Controllers\MovieController;
 
 $routes = new Router();
-$routes->get('/', $m->index());
 
+$routes->get('/', null, [MovieController::class, 'index']);
+$routes->get('/show', null, [MovieController::class, 'show']);
 $routes->init();

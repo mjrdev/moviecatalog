@@ -1,13 +1,14 @@
 <?php
+namespace MovieCatalog\Controllers;
 
-namespace movieCatalog\Controllers;
+
 
 class MovieController {
   static function store() {
-
+    
   }
   static function index() {
-    echo 'mostra varios filmes'; 
+    echo "ok";
   }
   static function show() {
     echo 'mostra um filme'; 

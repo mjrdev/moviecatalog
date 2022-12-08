@@ -1,5 +1,12 @@
-<?php 
-require 'vendor/autoload.php';
+<?php
+
+namespace MovieCatalog\Router;
+use FastRoute;
+
+/*
+  * Classe responsável pelo roteamento da aplicação.
+  * Usa como lib principal Fast Route.
+*/
 
 class Router {
   function __construct() {
@@ -15,7 +22,6 @@ class Router {
       $httpMethod = $_SERVER['REQUEST_METHOD'];
       $uri = $_SERVER['REQUEST_URI'];
 
-      // Strip query string (?foo=bar) and decode URI
       if (false !== $pos = strpos($uri, '?')) {
           $uri = substr($uri, 0, $pos);
       }
@@ -38,23 +44,29 @@ class Router {
             $vars = $routeInfo[2];
             {
               if(gettype($handler) == 'string') {
-                echo "string";
+                echo 'string';
               } else {
-                $handler();
+                call_user_func(array($handler[0], $handler[1]));
               }
             }
       }
     }
 
-  public function createRoute(string $method, string $path, mixed $handler): void {
+  public function createRoute(string $method, $middleware, string $path, mixed $handler): void {
     array_push($this->routes, compact('method', 'path', 'handler'));
   }
 
-  public function get(string $path, mixed $handler) { $this->createRoute('GET', $path, $handler); }
-  public function post() { $this->createRoute('GET', $path, $handler); }
-  public function put() { $this->createRoute('PUT', $path, $handler); }
-  public function patch() { $this->createRoute('PATCH', $path, $handler); }
-  public function delete() { $this->createRoute('DELETE', $path, $handler); }
+  public function get(string $path, mixed $middleware = null, array $handler) {
+    $this->createRoute('GET', $middleware, $path, $handler);
+  }
+  public function post() {
+    $this->createRoute('POST', $middleware, $path, $handler); 
+  }
+  public function put() {
+    $this->createRoute('PUT', $middleware, $path, $handler); 
+  }
+  public function patch() { $this->createRoute('PATCH', $middleware, $path, $handler); }
+  public function delete() { $this->createRoute('DELETE', $middleware, $path, $handler); }
 }
 
 

@@ -1,5 +1,4 @@
 <?php 
-$load = require_once __DIR__."/vendor/autoload.php";
-
-var_dump($load);
+define("DS", DIRECTORY_SEPARATOR);
+require 'vendor/autoload.php';
 require 'src/app.php';
