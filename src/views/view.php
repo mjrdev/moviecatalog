@@ -1,8 +1,14 @@
 <?php
 namespace MovieCatalog\Views;
+class View {
 
-class Views {
-  static public function send(string $name) {
-    return require __DIR__.'assets/'.$name.'.php';
+  static public function send(string $name): void {
+    $path = '/public/';
+    $file = __DIR__.$path.$name.'.php';
+    if(file_exists($file)) {
+      $view = require __DIR__.$path.$name.'.php';
+    } else {
+      echo '[ERROR] view não encontrada';
+    }
   }
 }

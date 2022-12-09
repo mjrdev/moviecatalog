@@ -1,17 +1,16 @@
 <?php
 namespace MovieCatalog\Controllers;
-
-
+use MovieCatalog\Views\View;
 
 class MovieController {
-  static function store() {
+  static function home() {
     
   }
   static function index() {
-    echo "ok";
+    return View::send('home');
   }
   static function show() {
-    echo 'mostra um filme'; 
+    return View::send('movie_list');
   }
   static function update() {
     
