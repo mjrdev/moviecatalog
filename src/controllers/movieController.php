@@ -7,7 +7,7 @@ class MovieController {
     
   }
   static function index() {
-    return View::send('home');
+    return View::send('index');
   }
   static function show() {
     return View::send('movie_list');
