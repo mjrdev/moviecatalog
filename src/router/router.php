@@ -43,30 +43,37 @@ class Router {
             $handler = $routeInfo[1];
             $vars = $routeInfo[2];
             {
-              if(gettype($handler) == 'string') {
-                echo 'string';
-              } else {
-                call_user_func(array($handler[0], $handler[1]));
+              switch (gettype($handler)) {
+                case 'object':
+                  $handler($vars);
+                  break;
+                default:
+                  call_user_func(array($handler[0], $handler[1]));
+                  break;
               }
             }
       }
     }
 
-  public function createRoute(string $method, $middleware, string $path, mixed $handler): void {
+  public function createRoute(string $method, $middleware, string $path, string | array | object $handler): void {
     array_push($this->routes, compact('method', 'path', 'handler'));
   }
 
-  public function get(string $path, mixed $middleware = null, array $handler) {
+  public function get(string $path, mixed $middleware = null, string | array | object $handler) {
     $this->createRoute('GET', $middleware, $path, $handler);
   }
-  public function post() {
+  public function post(string $path, mixed $middleware = null, string | array | object $handler) {
     $this->createRoute('POST', $middleware, $path, $handler); 
   }
-  public function put() {
+  public function put(string $path, mixed $middleware = null, string | array | object $handler) {
     $this->createRoute('PUT', $middleware, $path, $handler); 
   }
-  public function patch() { $this->createRoute('PATCH', $middleware, $path, $handler); }
-  public function delete() { $this->createRoute('DELETE', $middleware, $path, $handler); }
+  public function patch(string $path, mixed $middleware = null, string | array | object $handler) {
+    $this->createRoute('PATCH', $middleware, $path, $handler);
+  }
+  public function delete(string $path, mixed $middleware = null, string | array | object $handler) {
+    $this->createRoute('DELETE', $middleware, $path, $handler); 
+  }
 }
 
 

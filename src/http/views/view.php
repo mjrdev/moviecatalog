@@ -1,16 +1,15 @@
 <?php
-namespace MovieCatalog\Views;
-class View {
+namespace MovieCatalog\Http\Views;
 
-  static public function send(string $name): void {
+class View {
+  static public function send(string $name, string $template = "index", $props = []): void {
 
     $path = '/public/';
     $file = __DIR__.$path.$name.'.php';
     
     if(file_exists($file)) {
-      $path = '/public/';
       $title = 'Filmes em Destaque';
-      $view = require __DIR__.$path.$name.'.php';
+      $view = require __DIR__.$path.$template.'.php';
     } else {
       echo '[ERROR] view não encontrada';
     }

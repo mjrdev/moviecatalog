@@ -1,3 +1,5 @@
 <?php
 
-require 'routes.php';
+require_once 'conn.php';
+require_once 'routes.php';
+

@@ -12,19 +12,32 @@
   <!-- fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
+  <!-- icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style> .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48; margin: 0 } </style>
+
   <style lang="css">
     body {
       font-family: 'Inter', sans-serif
     }
-    .bg-primary { background-color: #f55538 !important; }
+    .bg-primary { background-color: #cf1313 !important; }
     .bg-primary-dark { background-color: #5e1f14 !important; }
     .bg-primary-secondary { background-color: #1f66d1 !important; }
     .bg-primary-secondary { background-color: #123469 !important; }
+    .btn-primary-template { background-color: #cf1313 !important; }
+    
+    .max-width-app {
+      max-width: 1200px;
+      margin: auto;
+    }
   </style>
   <title>Catálogo de Filmes</title>
 </head>
 <body>
-  <?= require('components/header.php'); ?>
-  <button class="btn btn-primary" type="button">Text</button>
+  <?php require 'components/header.php'; ?>
+  <main id="main" class="max-width-app" style="min-height: 90vh;">
+  <?php require $name.'.php'; ?>
+  </main>
+  <?php require 'components/footer.php';?>
 </body>
 </html>
