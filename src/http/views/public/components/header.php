@@ -3,20 +3,32 @@
 <div class="bg-primary">
   <nav class="navbar navbar-dark navbar-expand-lg bg-primary max-width-app">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="/">Catálogo</a>
+      <a class="navbar-brand fw-bold" href="/">
+      <span class="material-symbols-outlined">movie</span>
+        Catálogo
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll" style="font-size: 11pt;">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item mx-2">
-            <a class="nav-link <?= $name == 'pages/home' ? 'active border-bottom' : '' ?>" aria-current="page" href="/">Página Inicial</a>
+            <a class="nav-link d-flex align-items-center <?= $name == 'pages/home' ? 'active border-bottom' : '' ?>" aria-current="page" href="/">
+            <span span class="material-symbols-outlined me-1">home</span>
+              Página Inicial
+            </a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link <?= $name == 'pages/moviesList' ? 'active border-bottom' : '' ?>" href="/filmes">Filmes</a>
+            <a class="nav-link d-flex align-items-center <?= $name == 'pages/moviesList' ? 'active border-bottom' : '' ?>" aria-current="page" href="/filmes">
+            <span span class="material-symbols-outlined me-1">movie_filter</span>
+              Filmes
+            </a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link <?= $name == 'pages/add' ? 'active border-bottom' : '' ?>" href="/adicionar">Adicionar</a>
+            <a class="nav-link d-flex align-items-center <?= $name == 'pages/add' ? 'active border-bottom' : '' ?>" aria-current="page" href="/adicionar">
+            <span span class="material-symbols-outlined me-1">add_box</span>
+              Adicionar
+            </a>
           </li>
         </ul>
         <form class="d-flex" role="search">
