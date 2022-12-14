@@ -27,8 +27,12 @@ App foi construido com PHP puro com Composer, MySQL e Bootstrap, usando PDO para
 git clone [repo]
 composer install
 composer dump
+docker composer up --build
 php -S localhost:[port]
 ```
+* Futura adição total em container
+
+* Possa que seja necessário ativar a extenção do mysqli na sua maquina local. No arquivo php.ini adicionar (_extension=php_mysqli.dll_)
 
 <div align="center">
   mjrdev <a href="https://mjrdev.github.io/portfolio/">portfólio</a>

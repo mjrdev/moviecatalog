@@ -17,8 +17,6 @@ class MovieController {
   }
   static function store() {
     $movie = MovieModel::create();
-    // return View::send('pages/add', 'index', compact('movie'));
-
-    echo $movie;
+    return View::send('pages/add', 'index', compact('movie'));
   }
 }
