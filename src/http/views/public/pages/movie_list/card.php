@@ -10,7 +10,7 @@
   <div class="card-body ">
     <h5 class="card-title fs-6 fw-bold"><?= $movie[1] ?></h5>
     <p class="card-text text-truncate fs-7"><?= $movie[2] ?></p>
-    <a href="#" class="btn btn-dark btn-primary-template justify-content-center d-flex align-items-center">
+    <a href="#" class="btn btn-dark btn-primary-template justify-content-center d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#movie">
       saiba mais <span class="material-symbols-outlined align-center " style="font-size: 15pt">add</span>
     </a>
   </div>

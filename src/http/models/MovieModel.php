@@ -9,14 +9,20 @@ class MovieModel {
       description text NOT NULL,
       url_image text NOT NULL
     );');
+
+    $verifyIfExistsInitalValues = CONN->query('SELECT * FROM movies;');
+    if($verifyIfExistsInitalValues->num_rows == 0) {
+      require('initialValues.php');
+      CONN->query($queryInsertValues);
+    }
   }
 
   public static function create(): mixed {
     self::init();
     $title = $_POST['title']; $description = $_POST['description']; $url = $_POST['url_image'];
-    CONN->query("INSERT INTO movies VALUES (default, '{$title}', '{$description}', '{$url}');");
+    $exec = CONN->query("INSERT INTO movies VALUES (default, '{$title}', '{$description}', '{$url}');");
 
-    return 'add';
+    return $exec;
   }
 
   public static function index(): mixed {

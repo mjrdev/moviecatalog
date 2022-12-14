@@ -11,7 +11,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll" style="font-size: 11pt;">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
           <li class="nav-item mx-2">
             <a class="nav-link d-flex align-items-center <?= $name == 'pages/home' ? 'active border-bottom' : '' ?>" aria-current="page" href="/">
             <span span class="material-symbols-outlined me-1">home</span>

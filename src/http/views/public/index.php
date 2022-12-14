@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style> .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48; margin: 0 } </style>
 
+  <link type="image/png" sizes="96x96" rel="icon" href="https://img.icons8.com/external-anggara-filled-outline-anggara-putra/64/null/external-movie-media-anggara-filled-outline-anggara-putra.png">
+
   <style lang="css">
     body {
       font-family: 'Inter', sans-serif
@@ -34,6 +36,7 @@
   <title>Catálogo de Filmes</title>
 </head>
 <body>
+  <?php require 'components/modal.php'; ?>
   <?php require 'components/header.php'; ?>
   <main id="main" class="max-width-app" style="min-height: 90vh;">
   <?php require $name.'.php'; ?>
