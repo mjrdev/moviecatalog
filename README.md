@@ -1,6 +1,6 @@
 ### App Catálogo de Filmes com PHP & MySQL & Bootstrap
 
-![app example](/public/example.jpg)
+![app example](/public/project.jpg)
 
 App foi construido com PHP puro com Composer, MySQL e Bootstrap, usando PDO para conexão com o banco de dados. E se utilizando principalmende da estrutura MVC para melhor entendimento e qualidade do código.
 
