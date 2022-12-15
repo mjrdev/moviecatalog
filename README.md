@@ -7,6 +7,7 @@ App foi construido com PHP puro com Composer, MySQL e Bootstrap, usando PDO para
 #### Estrutura de pasta
 
 ```
+- /dbinitial        *guarda dump inicial do banco
 - /public
 - /src
   - /assets         *arquivos estáticos
@@ -20,19 +21,23 @@ App foi construido com PHP puro com Composer, MySQL e Bootstrap, usando PDO para
 
 #### Como executar
 
-> ##### Requisitos: PHP 8.1 CLI, Composer latest, MySQL 5.7 ou Docker.
-> ##### Para execução em modo de produção será necessário um servidor web.
+> ##### Requisitos: Docker & Composer.
 
 ```
 git clone [repo]
 composer install
 composer dump
 docker composer up --build
-php -S localhost:[port]
 ```
-* Futura adição total em container
+> ##### Sem composer instalado.
 
-* Possa que seja necessário ativar a extenção do mysqli na sua maquina local. No arquivo php.ini adicionar (_extension=php_mysqli.dll_)
+```
+git clone [repo]
+docker composer up --build
+docker exec -it php bash
+composer install
+composer dump
+```
 
 <div align="center">
   mjrdev <a href="https://mjrdev.github.io/portfolio/">portfólio</a>
