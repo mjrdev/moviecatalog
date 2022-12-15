@@ -29,7 +29,7 @@ composer install
 composer dump
 docker composer up --build
 ```
-> ##### Sem composer instalado.
+> ##### Apenas com docker.
 
 ```
 git clone [repo]
