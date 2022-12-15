@@ -13,7 +13,7 @@
     <div class="row my-4 flex-wrap">
       <div class="col-lg-6 col-md-11">
         <h1 class="fw-bold">Aqui você encontra tudo sobre o filme que deseja assistir.</h1>
-        <p>Projeto que guarda e lista filmes em Banco de Dados MySQL, feito puramente com PHP e composer, e estruturado em docker. Projeto feito com fins educacionais, não há implemetação, pode conter bugs.</p>
+        <p>Projeto que guarda e lista filmes em um Banco de Dados MySQL, feito puramente com PHP e Composer e estruturado em docker. Projeto feito com fins educacionais, não há implemetação.</p>
         <div class="d-grid gap-2 col-6 mx-auto">
         <a class="btn btn-danger text-white btn-primary-template justify-content-center d-flex align-items-center">
           saiba mais <span class="material-symbols-outlined align-center " style="font-size: 15pt">add</span>
