@@ -2,6 +2,7 @@
 
 namespace MovieCatalog\Router;
 use FastRoute;
+use MovieCatalog\Http\Views\Render;
 
 /*
   * Classe responsável pelo roteamento da aplicação.
@@ -32,7 +33,7 @@ class Router {
       switch ($routeInfo[0]) {
         case FastRoute\Dispatcher::NOT_FOUND:
             {
-              echo "notfount";
+              Render::send('pages/notFound', 'index');
             }
             break;
         case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
@@ -48,7 +49,7 @@ class Router {
                   $handler($vars);
                   break;
                 default:
-                  call_user_func(array($handler[0], $handler[1]));
+                  call_user_func(array($handler[0], $handler[1]), $vars);
                   break;
               }
             }

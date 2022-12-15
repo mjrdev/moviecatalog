@@ -31,11 +31,11 @@
             </a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" action="/filmes" method="get">
           <label class="d-flex align-items-center" for="search">
             <span class="material-symbols-outlined text-white mx-2" style="font-size: 23pt;">search</span>
           </label>
-          <input id="search" class="outline-light search form-control me-2" type="text" placeholder="Buscar por filmes aqui" aria-label="Search">
+          <input id="search" name="search" class="outline-light search form-control me-2" type="text" placeholder="Buscar por filmes aqui" aria-label="Search">
           <button class="btn-search btn btn-outline-light" type="submit">Pesquisar</button>
         </form>
       </div>

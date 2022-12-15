@@ -1,3 +1,5 @@
+
+
 <div class="mt-4">
   <div class="container my-4">
     <form method="post" action="#">
@@ -15,18 +17,27 @@
       </div>
       <div class="mb-3 row">
         <div class="col-6">
-          <label for="url-image" class="form-label">Ano de lançamento</label>
-          <input value="" name="url_image" type="number" class="form-control" id="url-image" placeholder="2023" required>
+          <label for="year" class="form-label">Ano de lançamento</label>
+          <input value="" name="year" type="number" class="form-control" id="year" placeholder="2023" required>
         </div>
         <div class="col-6">
-          <label for="url-image" class="form-label">País de Origem</label>
-          <input value="" name="url_image" type="text" class="form-control" id="url-image" placeholder="México" required>
+          <label for="country" class="form-label">País de Origem</label>
+          <input value="" name="country" type="text" class="form-control" id="country" placeholder="México" required>
         </div>
       </div>
       <div class="d-grid gap-2 col-3 mx-auto">
         <button class="btn btn-primary-template text-white" type="submit">Salvar</button>
       </div>
     </form>
+    <?php
+      if(isset($props['message_success'])) {
+        echo '
+          <div class="alert alert-success mt-2" role="alert">
+            filme adicionado com sucesso!
+          </div>
+        ';
+      }
+    ?>
   </div>
   <!-- <h2 class="fw-semibold ms-3 mb-4">Veja alguns exemplos</h2>
   <div class="d-flex justify-content-center justify-content-sm-center justify-content-lg-around flex-wrap gap-3">

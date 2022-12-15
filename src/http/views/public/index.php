@@ -36,7 +36,6 @@
   <title>Catálogo de Filmes</title>
 </head>
 <body>
-  <?php require 'components/modal.php'; ?>
   <?php require 'components/header.php'; ?>
   <main id="main" class="max-width-app" style="min-height: 90vh;">
   <?php require $name.'.php'; ?>

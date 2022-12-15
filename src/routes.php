@@ -7,6 +7,7 @@ $routes = new Router();
 
 $routes->get('/', null, [MovieController::class, 'home']);
 $routes->get('/filmes', null, [MovieController::class, 'index']);
+$routes->get('/filme/{id}', null, [MovieController::class, 'show']);
 $routes->get('/adicionar', null, [MovieController::class, 'add']);
 $routes->post('/adicionar', null, [MovieController::class, 'store']);
 
