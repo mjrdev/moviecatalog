@@ -2,6 +2,7 @@
 namespace MovieCatalog\Http\Models;
 
 class MovieModel {
+<<<<<<< HEAD
   private static function init() {
     CONN->query('CREATE TABLE IF NOT EXISTS movies (
       id bigint AUTO_INCREMENT PRIMARY KEY,
@@ -16,9 +17,10 @@ class MovieModel {
       CONN->query($queryInsertValues);
     }
   }
+=======
+>>>>>>> docker
 
   public static function create(): mixed {
-    self::init();
     $title = $_POST['title']; $description = $_POST['description']; $url = $_POST['url_image'];
     $exec = CONN->query("INSERT INTO movies VALUES (default, '{$title}', '{$description}', '{$url}');");
 
@@ -26,7 +28,6 @@ class MovieModel {
   }
 
   public static function index(): mixed {
-    self::init();
 
     $movies = CONN->query('SELECT * FROM movies;');
 
