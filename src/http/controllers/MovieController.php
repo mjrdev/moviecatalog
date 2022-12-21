@@ -20,7 +20,7 @@ class MovieController {
       return Render::send('pages/moviesList', 'index', $movies);
     } else {
 
-      $searchMovies = CONN->query("SELECT * FROM movies WHERE title LIKE '{$_GET['search']}';")->fetch_all();
+      $searchMovies = CONN->query("SELECT * FROM movies WHERE title LIKE '%{$_GET['search']}%';")->fetch_all();
       return Render::send('pages/moviesList', 'index', $searchMovies);
     }
   }
